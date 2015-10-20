@@ -1,0 +1,51 @@
+{{ partial "header.html" . }}
+
+<div id="layout" class="pure-g">
+    {{ partial "sidebar.html" . }}
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            <div>
+                Streams: 
+                <a href="http://twitch.tv/fritangatv/profile" class="pure-button streamList button-xsmall" data-live="no" data-channelindex="" target="_blank" id="status-fritangatv"> <i class="fa fa-circle statusCircle"></i> Fritanga TV</a>
+                <a href="http://twitch.tv/thewiredfixer/profile" class="pure-button streamList button-xsmall" data-live="no" target="_blank" id="status-thewiredfixer"> <i class="fa fa-circle statusCircle"></i> TheWiredfixer</a>
+                <a href="http://twitch.tv/pokemex/profile" class="pure-button streamList button-xsmall" data-live="no" target="_blank" id="status-pokemex"> <i class="fa fa-circle statusCircle"></i> Pokemex</a>
+                <a href="http://twitch.tv/UsagiHimura/profile" class="pure-button streamList button-xsmall" data-live="no" target="_blank" id="status-UsagiHimura"> <i class="fa fa-circle statusCircle"></i> UsagiHimura</a>
+            </div>
+            <div id="streamZone"></div>
+            <!-- A wrapper for all the blog posts -->
+            <div class="posts">
+                {{ range .Paginator.Pages }}
+                <h1 class="content-subhead">{{ .Date.Format "02 Jan 2006, 15:04" }}</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="{{ .Permalink }}" class="post-title">{{ .Title }}</a>
+
+                        <p class="post-meta">
+                            {{ with .Params.author }}
+                                By <strong class="post-author">{{ . }}</strong>
+                            {{ end }}
+                            {{ if isset .Params "categories" }}
+                                under 
+                                {{ $baseUrl := .Site.BaseURL }}
+                                {{ range .Params.categories }}<a class="post-category post-category-{{ . }}" href="{{ $baseUrl }}/categories/{{ . | urlize }}">{{ . }}</a>{{ end }}
+                            {{ end }}
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        {{ .Content }}
+                    </div>
+                </section>
+                {{ end }}
+            </div>
+            {{ partial "pagination.html" . }}
+            {{ partial "footer.html" . }}
+        </div>
+    </div>
+</div>
+
+{{ partial "analytics.html" . }}
+</body>
+</html>

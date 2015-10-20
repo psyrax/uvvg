@@ -1,0 +1,4 @@
+baseurl = "http://uv.vg"
+languageCode = "es-mx"
+title = "UV.VG"
+theme = "purehugo"
