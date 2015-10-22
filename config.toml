@@ -1,4 +1,97 @@
-baseurl = "http://uv.vg"
+baseurl = "http://live.uv.vg/"
 languageCode = "es-mx"
-title = "UV.VG"
-theme = "purehugo"
+title = "Última Vida"
+theme = "hugo-creative-theme"
+[params]
+
+	# You can use Markdown syntax for urls [text](//url.to/source) for
+	# most longer texts.
+
+	# All icons using Fontawesome's icon font. Look at fortawesome.github.io/Font-Awesome/icons/
+	# for more icons. The icons are represented by their corresponding
+	# CSS class.
+
+	# All projects of the portfolio are defined in their own files.
+	# You can find example projects at 'exampleSite/data/projects'. Copy the 'projects'
+	# folder into the 'data' directory at the root of this Hugo site.
+	# For more informtion take a look at the README.
+
+	# To provide some metadata for search engines feel free to add a few
+    # information about you and your website.
+	name = "Última Vida"
+	description = "¿Te apasionan los videojuegos? ¿Eres jugador competitivo? ¿Te gusta transmitir en vivo? ¿Quieres divertirte en comunidad?"
+
+
+	# Navigation
+	[params.navigation]
+		brand = "Última Vida"
+
+		[params.navigation.links]
+			about     = "Info"
+			services  = "Nosotros"
+			portfolio = "Portfolio"
+			contact   = "Contacto"
+
+
+	# Hero section
+	[params.hero]
+		# To change the background of the hero section, replace the 'header.jpg' at './static/img' with your own.
+		slogan     = "Juégala en serio"
+		subtitle   = "¿Te apasionan los videojuegos? ¿Eres jugador competitivo? ¿Te gusta transmitir en vivo? ¿Quieres divertirte en comunidad?"
+		buttonText = "Nosotros te conectamos"
+
+
+	# About section
+	[params.about]
+		headline    = "Somos tu player two."
+		description = "Streaming, videojuegos, eSports. Buscamos traer contenido en español para ustedes enfocado a todas las consolas y juegos que existen. ¡Pero lo queremos hacer con tu compañía! Síguenos, comparte y hasta colabora con nosotros."
+		buttonText  = "Comencemos"
+
+	# Service section
+	[params.services]
+		headline = "¿Qué hacemos?"
+
+	[[params.services.list]]
+            icon = "fa-television"
+            title = "Streaming"
+            description = "A través de nuestra red de Twitch, transmitimos gameplays, torneos y hasta Talk Shows enfocados a videojuegos. ¡Y tú puedes ser parte del equipo!"
+
+        [[params.services.list]]
+            icon = "fa-gamepad"
+            title = "eSports"
+            description = "Creemos en el competitivo como un medio donde pueden crecen jugadores profesionales con fuerte presencia a nivel internacional. Incluso somos organizadores de algunos eventos desde hace 15 años."
+     
+   [[params.services.list]]
+            icon = "fa-book"
+            title = "Contactos"
+            description = "Contamos con buena relación con asociaciones como IGDA (México, Colombia, Perú), KaraOKulta, DEVHR.MX, Motor de Juegos, GGDG y más."
+
+
+        [[params.services.list]]
+        	icon = "fa-commenting-o"
+			title = "Difusión"
+			description = "Si eres desarrollador, de empresa grande o indie, te ayudamos a difundir lanzamientos, avances de desarrollo, eventos, comunicados de prensa o lo que necesites."
+
+
+    # Portfolio modals
+	[params.portfolio.modal]
+        client = "Client"
+        date = "Date"
+        category = "Category"
+        buttonText = "Close"
+
+    # Aside section
+	[params.aside]
+		headline = "¡Checa los canales en nuestra network de Twitch!"
+
+		[params.aside.button]
+			text = "Ir ahora"
+			link = "//uv.vg/blogs"
+
+	# Contact section
+	[params.contact]
+		headline = "¡Únete!"
+		description = "¿Te gustaría participar con nosotros? Si tienes una idea, te queremos escuchar. ¿Quieres hablar de videojuegos? ¿Hacer speedruns? ¿Eres un jugador profesional? ¿Quieres hacer un Talk Show? ¡Cuéntanos!"
+		twitter = "ultimavida"
+		email = "grow@uv.vg"
+		facebook = "ultimavida"
